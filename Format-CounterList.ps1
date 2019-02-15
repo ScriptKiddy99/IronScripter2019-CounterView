@@ -30,3 +30,4 @@
    }
    return $CounterObjects
 }
+Get-Counter | Format-CounterList 
