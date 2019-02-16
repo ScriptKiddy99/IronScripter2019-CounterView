@@ -1,4 +1,4 @@
-﻿Function Format-CounterList 
+Function Format-CounterList 
 {
     Param(
         [Parameter(Mandatory=$true,
@@ -12,7 +12,7 @@
    
    ForEach($Counter in $CounterSamples) {
 
-        [PSCustomObject]$CounterObj = [PSCustomObject]@{DateTime = (Get-Date -f "dd/MM/yyyy hh:mm:ss tt")}
+        [PSCustomObject]$CounterObj = [PSCustomObject]@{DateTime = $Counter.Timestamp}
 
         [String]$CounterString =  ($Counter.Path + ":" + $Counter.CookedValue)
         
